@@ -35,12 +35,13 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |DOM1          |4     |168            |8                  |3                   |+      |yes|yes|no  |yes       |
 |DOM1-LR       |4     |152            |8                  |3                   |yes    |yes|yes|no  |yes       |
 |DOM1-Rapid    |2     |372            |25                 |19                  |?      |?  |?  |?   |?         |
+|CMS1          |4     |240            |32                 |12                  |+      |+  |yes|no  |yes       |
 |ISW1          |8     |184            |8                  |3                   |+      |+  |+  |no  |yes       |
 |ISW1-BP       |4     |168            |8                  |3                   |yes    |yes|yes|no  |yes       |
 |ISW1-PINI     |12    |224            |16                 |6                   |+      |+  |+  |+   |yes       |
 |HPC2-1        |12    |256            |8                  |3                   |+      |+  |+  |yes |yes       |
 |HPC2-1 Strong |12    |272            |16                 |6                   |+      |+  |yes|+   |yes       |
-|CMS1          |4     |240            |32                 |12                  |+      |+  |yes|no  |yes       |
+
 ---------------------------------
 ## SILVER Results for Axuliary Gate Built for This Repository
 
@@ -54,5 +55,6 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 
 *Ai is the output (i+1)^th XOR in the Skinny Sbox8 circuit, counted left-to-right, top-to-down.
 
+---------------------------------
 
 
