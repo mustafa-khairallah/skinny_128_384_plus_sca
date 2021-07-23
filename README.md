@@ -48,7 +48,7 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |HPC2-1 Strong |12    |272            |16                 |6                   |+      |+  |yes|+   |yes       |
 
 ---------------------------------
-## SILVER Results for Axuliary Gate Built for This Repository
+## SILVER Results for Auxliary Gate Built for This Repository
 
 |GATE          |Cycles|Possible Probes|Randomness per Fn. |Max. Rand. per Cycle|Probing|NI |SNI|PINI|Uniformity|
 |--------------|------|---------------|-------------------|--------------------|-------|---|---|----|----------|
