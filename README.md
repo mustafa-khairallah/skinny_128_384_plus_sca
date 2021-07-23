@@ -31,13 +31,15 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 ## SILVER Results for SBox8 Implementations
 
 
-|Version   |Cycles|Possible Probes|Randomness per SBox|Max. Rand. per Cycle|Probing|NI |SNI|PINI|Uniformity|
-|----------|------|---------------|-------------------|--------------------|-------|---|---|----|----------|
-|DOM1      |4     |168            |8                  |3                   |+      |yes|yes|no  |yes       |
-|DOM1-LR   |4     |152            |8                  |3                   |yes    |yes|yes|no  |yes       |
-|DOM1-Rapid|2     |372            |25                 |19                  |?      |?  |?  |?   |?         |
-|ISW1      |8     |184            |8                  |3                   |+      |+  |+  |no  |yes       |
-|ISW1-BP   |4     |168            |8                  |3                   |yes    |yes|yes|no  |yes       |
-|ISW1-PINI |12    |224            |16                 |6                   |+      |+  |+  |+   |yes       |
-|HPC2-1    |12    |256            |8                  |3                   |+      |+  |+  |yes |yes       |
+|Version       |Cycles|Possible Probes|Randomness per SBox|Max. Rand. per Cycle|Probing|NI |SNI|PINI|Uniformity|
+|--------------|------|---------------|-------------------|--------------------|-------|---|---|----|----------|
+|DOM1          |4     |168            |8                  |3                   |+      |yes|yes|no  |yes       |
+|DOM1-LR       |4     |152            |8                  |3                   |yes    |yes|yes|no  |yes       |
+|DOM1-Rapid    |2     |372            |25                 |19                  |?      |?  |?  |?   |?         |
+|ISW1          |8     |184            |8                  |3                   |+      |+  |+  |no  |yes       |
+|ISW1-BP       |4     |168            |8                  |3                   |yes    |yes|yes|no  |yes       |
+|ISW1-PINI     |12    |224            |16                 |6                   |+      |+  |+  |+   |yes       |
+|HPC2-1        |12    |256            |8                  |3                   |+      |+  |+  |yes |yes       |
+|HPC2-1 Strong |12    |272            |16                 |6                   |+      |+  |yes|+   |yes       |
+|CMS1          |4     |240            |32                 |12                  |+      |+  |yes|no  |yes       |
 
