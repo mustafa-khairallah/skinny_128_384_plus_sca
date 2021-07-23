@@ -30,7 +30,7 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 
 ## SILVER Results for SBox8 Implementations
 
---------------------------------------------
+
 |Version   |Probing|NI |SNI|PINI|Uniformity|
 --------------------------------------------
 |DOM1      |+      |yes|yes|no  |yes       |
@@ -40,4 +40,4 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |ISW1-BP   |yes    |yes|yes|no  |yes       |
 |ISW1-PINI |+      |+  |+  |+   |yes       |
 |HPC2-1    |?      |?  |?  |?   |?         |
---------------------------------------------
+
