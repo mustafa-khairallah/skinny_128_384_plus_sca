@@ -18,8 +18,26 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 3. DOM1 indep. 2 Cycles non-pipelined (src_rtl/sbox8/dom/dom1/skinny_sbox8_dom1_rapid_non_pipelined.v).
 4. DOMD indep. 4 Cycles non-pipelined (src_rtl/sbox8/dom/domd/skinny_sbox8_domd_non_pipelined.v).
 
-### ISW Masking
+### Modified ISW Masking (Private Circuits)
 
 1. ISW1 8 Cycles non-pipelined (src_rtl/sbox8/isw/isw1/skinny_sbox8_isw1_non_pipelined.v).
 2. ISW1 4 Cycles with last register in the gadget bypassed non-pipelined (src_rtl/sbox8/isw/isw1/skinny_sbox8_isw1_bypass_non_pipelined.v).
 3. ISW1 12 Cycles PINI-secure for d <= 1 non-pipelined (src_rtl/sbox8/isw/isw1/skinny_sbox8_isw1_pini_non_pipelined.v).
+
+### Hardware Private Circuits 2 (HPC2)
+
+1. HPC2-1 8 Cycles non-piplined (src_rtl/sbox8/hpc2/hpc2_1/skinny_sbox8_hpc2_1_non_pipelined.v).
+
+## SILVER Results for SBox8 Implementations
+
+--------------------------------------------
+|Version   |Probing|NI |SNI|PINI|Uniformity|
+--------------------------------------------
+|DOM1      |+      |yes|yes|no  |yes       |
+|DOM1-LR   |yes    |yes|yes|no  |yes       |
+|DOM1-Rapid|?      |?  |?  |?   |?         |
+|ISW1      |+      |+  |+  |no  |yes       |
+|ISW1-BP   |yes    |yes|yes|no  |yes       |
+|ISW1-PINI |+      |+  |+  |+   |yes       |
+|HPC2-1    |?      |?  |?  |?   |?         |
+--------------------------------------------
