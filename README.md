@@ -22,4 +22,4 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 
 1. ISW1 8 Cycles non-pipelined (src_rtl/sbox8/isw/isw1/skinny_sbox8_isw1_non_pipelined.v).
 2. ISW1 4 Cycles with last register in the gadget bypassed non-pipelined (src_rtl/sbox8/isw/isw1/skinny_sbox8_isw1_bypass_non_pipelined.v).
-3. ISW1 12 Cycles PINI-secure for d $leq$ 1 non-pipelined (src_rtl/sbox8/isw/isw1/skinny_sbox8_isw1_pini_non_pipelined.v).
+3. ISW1 12 Cycles PINI-secure for d <= 1 non-pipelined (src_rtl/sbox8/isw/isw1/skinny_sbox8_isw1_pini_non_pipelined.v).
