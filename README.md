@@ -42,4 +42,17 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |HPC2-1        |12    |256            |8                  |3                   |+      |+  |+  |yes |yes       |
 |HPC2-1 Strong |12    |272            |16                 |6                   |+      |+  |yes|+   |yes       |
 |CMS1          |4     |240            |32                 |12                  |+      |+  |yes|no  |yes       |
+---------------------------------
+## SILVER Results for Axuliary Gate Built for This Repository
+
+|GATE          |Cycles|Possible Probes|Randomness per Fn. |Max. Rand. per Cycle|Probing|NI |SNI|PINI|Uniformity|
+|--------------|------|---------------|-------------------|--------------------|-------|---|---|----|----------|
+|AND3-DOM1     |1     |43             |3                  |3                   |+      |+  |yes|no  |yes       |
+|AND4-DOM1     |1     |89             |14                 |7                   |+      |+  |yes|no  |yes       |
+|A3-DOM1       |1     |186            |14                 |14                  |+      |+  |yes|no  |yes       |
+|A4-DOM1       |1     |40             |2                  |2                   |+      |+  |yes|no  |yes       |
+|A7-DOM1       |1     |64             |4                  |4                   |+      |+  |yes|no  |yes       |
+*Ai is the output (i+1)^th XOR in the Skinny Sbox8 circuit, counted left-to-right, top-to-down.
+---------------------------------
+
 
