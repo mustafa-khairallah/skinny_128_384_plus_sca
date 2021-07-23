@@ -27,9 +27,8 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 ### Hardware Private Circuits 2 (HPC2)
 
 1. HPC2-1 8 Cycles non-piplined (src_rtl/sbox8/hpc2/hpc2_1/skinny_sbox8_hpc2_1_non_pipelined.v).
-
+---------------------------------
 ## SILVER Results for SBox8 Implementations
-
 
 |Version       |Cycles|Possible Probes|Randomness per SBox|Max. Rand. per Cycle|Probing|NI |SNI|PINI|Uniformity|
 |--------------|------|---------------|-------------------|--------------------|-------|---|---|----|----------|
@@ -52,7 +51,8 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |A3-DOM1       |1     |186            |14                 |14                  |+      |+  |yes|no  |yes       |
 |A4-DOM1       |1     |40             |2                  |2                   |+      |+  |yes|no  |yes       |
 |A7-DOM1       |1     |64             |4                  |4                   |+      |+  |yes|no  |yes       |
+
 *Ai is the output (i+1)^th XOR in the Skinny Sbox8 circuit, counted left-to-right, top-to-down.
----------------------------------
+
 
 
