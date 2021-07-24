@@ -16,7 +16,8 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 1. DOM1 indep. 4 cycles non-pipelined (src_rtl/sbox8/dom/dom1/skinny_sbox8_dom1_non_pipelined.v).
 2. DOM1 indep. 4 Cycles non-pipelined with less FFs (src_rtl/sbox8/dom/dom1/skinny_sbox8_dom1_less_reg_non_pipelined.v).
 3. DOM1 indep. 2 Cycles non-pipelined (src_rtl/sbox8/dom/dom1/skinny_sbox8_dom1_rapid_non_pipelined.v).
-4. DOMD indep. 4 Cycles non-pipelined (src_rtl/sbox8/dom/domd/skinny_sbox8_domd_non_pipelined.v).
+4. DOM1-SNI indep. 8 cycles non-pipelined (src_rtl/sbox8/dom/dom1/skinny_sbox8_dom1_sni_non_pipelined.v).
+5. DOMD indep. 4 Cycles non-pipelined (src_rtl/sbox8/dom/domd/skinny_sbox8_domd_non_pipelined.v).
 
 ### Consolidated Masking Scheme
 
@@ -48,6 +49,7 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |DOM1          |4     |168            |8                  |3                   |+      |yes|yes|no  |yes       |
 |DOM1-LR       |4     |152            |8                  |3                   |yes    |yes|yes|no  |yes       |
 |DOM1-Rapid    |2     |372            |25                 |19                  |?      |?  |?  |?   |?         |
+|DOM1-SNI      |8     |184            |8                  |3                   |+      |+  |+  |no  |yes       |
 |CMS1          |4     |240            |32                 |12                  |+      |+  |yes|no  |yes       |
 |CMS1-Rapid    |2     |531            |76                 |56                  |?      |?  |?  |?   |?         |
 |ISW1          |8     |184            |8                  |3                   |+      |+  |+  |no  |yes       |
