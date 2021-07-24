@@ -41,6 +41,10 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 2. TI-2 1 Cycle  3-share non-pipelined (src_rtl/sbox8/ti/ti2skinny_sbox8_ti2_nr_non_pipelined.v).
 3. TI-2 4 Cycles 3-share with resharing non-pipelined (src_rtl/sbox8/ti/ti2skinny_sbox8_ti2_reshare_non_pipelined.v).
 
+### PARA (Parallel Masking Algorithms)
+
+1. PARA1 8 Cycles (src_rtl/sbox8/para/para1/skinny_sbox8_para1_non_pipelined.v).
+
 ---------------------------------
 ## SILVER Results for SBox8 Implementations
 
@@ -61,6 +65,7 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |TI-2-NR       |1     |256            |0                  |0                   |yes    |no |no |no  |yes       |
 |TI-2-Reshare  |4     |352            |23                 |9                   |?      |?  |?  |?   |?         |
 |TI-2-Rapid    |2     |?              |0                  |0                   |?      |?  |?  |?   |?         |
+|PARA1         |8     |192            |16                 |6                   |+      |+  |+  |no  |yes       |
 
 ---------------------------------
 ## SILVER Results for Auxiliary Gate Built for This Repository
