@@ -75,6 +75,8 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |A3-CMS1       |1     |252            |36                 |36                  |+      |+  |yes|no  |yes       |
 |A4-CMS1       |1     |58             |8                  |8                   |+      |+  |yes|no  |yes       |
 |A7-CMS1       |1     |88             |12                 |12                  |+      |+  |yes|no  |yes       |
+|AND3-TI2      |1     |72             |5                  |5                   |+      |no |no |no  |yes       |
+|AND4-TI2      |1     |182            |9                  |9                   |+      |no |no |no  |yes       |
 
 *Ai is the output (i+1)^th XOR in the Skinny Sbox8 circuit, counted left-to-right, top-to-down.
 
