@@ -21,6 +21,7 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 ### Consolidated Masking Scheme
 
 1. CMS1 4 cycles non-pipelined (src_rtl/sbox8/cms/cms1/skinny_sbox8_cms1_non_pipelined.v).
+2. CMS1 2 cycles non-pipelined (src_rtl/sbox8/cms/cms1/skinny_sbox8_cms1_rapid_non_pipelined.v).
 
 ### Modified ISW Masking (Private Circuits)
 
@@ -32,6 +33,13 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 
 1. HPC2-1 8 Cycles non-piplined (src_rtl/sbox8/hpc2/hpc2_1/skinny_sbox8_hpc2_1_non_pipelined.v).
 2. HPC2-1 12 Cycles strengthened non-piplined (src_rtl/sbox8/hpc2/hpc2_1/skinny_sbox8_hpc2_1_str_non_pipelined.v).
+
+### Threshold Implementation
+
+1. TI-2 4 Cycles 3-share non-pipelined (src_rtl/sbox8/ti/ti2skinny_sbox8_ti2_non_pipelined.v).
+2. TI-2 1 Cycle  3-share non-pipelined (src_rtl/sbox8/ti/ti2skinny_sbox8_ti2_nr_non_pipelined.v).
+3. TI-2 4 Cycles 3-share with resharing non-pipelined (src_rtl/sbox8/ti/ti2skinny_sbox8_ti2_reshare_non_pipelined.v).
+
 ---------------------------------
 ## SILVER Results for SBox8 Implementations
 
@@ -47,6 +55,10 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |ISW1-PINI     |12    |224            |16                 |6                   |+      |+  |+  |+   |yes       |
 |HPC2-1        |12    |256            |8                  |3                   |+      |+  |+  |yes |yes       |
 |HPC2-1 Strong |12    |272            |16                 |6                   |+      |+  |yes|+   |yes       |
+|TI-2          |4     |280            |0                  |0                   |+      |no |no |no  |yes       |
+|TI-2-NR       |1     |256            |0                  |0                   |yes    |no |no |no  |yes       |
+|TI-2-Reshare  |4     |352            |23                 |9                   |?      |?  |?  |?   |?         |
+|TI-2-Rapid    |2     |?              |0                  |0                   |?      |?  |?  |?   |?         |
 
 ---------------------------------
 ## SILVER Results for Auxliary Gate Built for This Repository
