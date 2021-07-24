@@ -41,7 +41,7 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |DOM1-LR       |4     |152            |8                  |3                   |yes    |yes|yes|no  |yes       |
 |DOM1-Rapid    |2     |372            |25                 |19                  |?      |?  |?  |?   |?         |
 |CMS1          |4     |240            |32                 |12                  |+      |+  |yes|no  |yes       |
-|CMS1-Rapid    |2     |?              |76                 |56                  |?      |?  |?  |?   |?         |
+|CMS1-Rapid    |2     |531            |76                 |56                  |?      |?  |?  |?   |?         |
 |ISW1          |8     |184            |8                  |3                   |+      |+  |+  |no  |yes       |
 |ISW1-BP       |4     |168            |8                  |3                   |yes    |yes|yes|no  |yes       |
 |ISW1-PINI     |12    |224            |16                 |6                   |+      |+  |+  |+   |yes       |
@@ -60,6 +60,9 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |A7-DOM1       |1     |64             |4                  |4                   |+      |+  |yes|no  |yes       |
 |AND3-CMS1     |1     |58             |8                  |8                   |+      |+  |+  |no  |yes       |
 |AND4-CMS1     |1     |116            |16                 |16                  |+      |+  |+  |no  |yes       |
+|A3-CMS1       |1     |252            |36                 |36                  |+      |+  |yes|no  |yes       |
+|A4-CMS1       |1     |58             |8                  |8                   |+      |+  |yes|no  |yes       |
+|A7-CMS1       |1     |88             |12                 |12                  |+      |+  |yes|no  |yes       |
 
 *Ai is the output (i+1)^th XOR in the Skinny Sbox8 circuit, counted left-to-right, top-to-down.
 
