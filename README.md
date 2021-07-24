@@ -61,7 +61,7 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |TI-2-Rapid    |2     |?              |0                  |0                   |?      |?  |?  |?   |?         |
 
 ---------------------------------
-## SILVER Results for Auxliary Gate Built for This Repository
+## SILVER Results for Auxiliary Gate Built for This Repository
 
 |GATE          |Cycles|Possible Probes|Randomness per Fn. |Max. Rand. per Cycle|Probing|NI |SNI|PINI|Uniformity|
 |--------------|------|---------------|-------------------|--------------------|-------|---|---|----|----------|
