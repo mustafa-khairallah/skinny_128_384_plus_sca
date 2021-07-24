@@ -66,7 +66,7 @@ This  page is under-construction with details about Skinny, Romulus and the impl
 |GATE          |Cycles|Possible Probes|Randomness per Fn. |Max. Rand. per Cycle|Probing|NI |SNI|PINI|Uniformity|
 |--------------|------|---------------|-------------------|--------------------|-------|---|---|----|----------|
 |AND3-DOM1     |1     |43             |3                  |3                   |+      |+  |yes|no  |yes       |
-|AND4-DOM1     |1     |89             |14                 |7                   |+      |+  |yes|no  |yes       |
+|AND4-DOM1     |1     |89             |7                  |7                   |+      |+  |yes|no  |yes       |
 |A3-DOM1       |1     |186            |14                 |14                  |+      |+  |yes|no  |yes       |
 |A4-DOM1       |1     |40             |2                  |2                   |+      |+  |yes|no  |yes       |
 |A7-DOM1       |1     |64             |4                  |4                   |+      |+  |yes|no  |yes       |
