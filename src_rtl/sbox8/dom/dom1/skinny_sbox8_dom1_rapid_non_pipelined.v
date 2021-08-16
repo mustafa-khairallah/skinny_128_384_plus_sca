@@ -75,14 +75,14 @@ module skinny_sbox8_dom1_rapid_non_pipelined (/*AUTOARG*/
    assign na3 = a3 ^ 2'b01;
    assign na2 = a2 ^ 2'b01;
 
-   dom1_sbox8_cfn_fr b764 (a0,bi7,bi6,bi4,r[0],clk);
-   dom1_sbox8_cfn_fr b320 (a1,bi3,bi2,bi0,r[1],clk);
-   dom1_sbox8_cfn_fr b216 (a2,bi2,bi1,bi6,r[2],clk);
+   dom1_rpd_sbox8_cfn_fr b764 (a0,bi7,bi6,bi4,r[0],clk);
+   dom1_rpd_sbox8_cfn_fr b320 (a1,bi3,bi2,bi0,r[1],clk);
+   dom1_rpd_sbox8_cfn_fr b216 (a2,bi2,bi1,bi6,r[2],clk);
    rapid_a3 a3_cf (a3,nbi7,nbi6,bi5,nbi4,nbi3,nbi2,nbi0,r[16:3],clk);   
    rapid_a4 a4_cf (a4,nbi3,nbi2,bi1,nbi0,r[18:17],clk);
    
-   dom1_sbox8_cfn_fr b237 (a5,a2, a3, bi7,r[19],clk);
-   dom1_sbox8_cfn_fr b303 (a6,a3, a0, bi3,r[20],clk);
+   dom1_rpd_sbox8_cfn_fr b237 (a5,a2, a3, bi7,r[19],clk);
+   dom1_rpd_sbox8_cfn_fr b303 (a6,a3, a0, bi3,r[20],clk);
    rapid_a7 a7_cf (a7,nbi7,na4,na3,na2,bi2,r[24:21],clk);
 
    assign {bo1[6],bo0[6]} = a0;
@@ -108,7 +108,7 @@ endmodule // skinny_sbox8_dom1_rapid_non_pipelined
 // output of (a and b) xor c, while for the mixed
 // shares we also use (a and b) xor c, but c is the
 // fresh randomness.
-module dom1_sbox8_cfn_fr (/*AUTOARG*/
+module dom1_rpd_sbox8_cfn_fr (/*AUTOARG*/
    // Outputs
    f,
    // Inputs

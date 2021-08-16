@@ -5,10 +5,6 @@
  Date: July, 2021
  */
 
-// The ISW gadget based sbox8 with registered shares.
-// Takes 8 cycles. Non-pipelined, so the input
-// must remain stable for 8 cycles, including the 
-// refreshing mask r.
 
 module skinny_sbox8_cms1_non_pipelined (/*AUTOARG*/
    // Outputs
