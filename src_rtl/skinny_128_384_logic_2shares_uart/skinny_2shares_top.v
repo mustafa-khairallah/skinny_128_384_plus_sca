@@ -23,6 +23,7 @@ module skinny_2shares_top (/*AUTOARG*/
    reg [127:0]    tweak2;
    wire [127:0]   next_tweak2;
    reg [5:0]      constant;
+   reg [4:0] 	  en;   
 
    wire [255:0]   sb, atk, shr, mxc, rkey; 
 
@@ -32,6 +33,7 @@ module skinny_2shares_top (/*AUTOARG*/
       if (!rst_i) begin
          done_o <= 1;
          constant <= 6'h01;
+	 en <= 5'h10;	 
       end
       else if (start_i) begin
          constant <= 6'h01;
@@ -40,17 +42,22 @@ module skinny_2shares_top (/*AUTOARG*/
          key <= key_i;
          tweak1 <= tweak1_i;
          tweak2 <= tweak2_i;     
-         done_o <= 0;    
+         done_o <= 0;
+	 en <= 5'h01;	 
       end
       else if (done_o == 0) begin
-         constant <= {constant[4:0],constant[5]^constant[4]^1'b1};
-         state <= mxc;
-         key <= next_key;
-         tweak1 <= next_tweak1;
-         tweak2 <= next_tweak2;
-         if (constant == 6'h1a) begin
-            done_o <= 1;            
-         end
+	 en <= {en[3:0],en[4]};	 
+	 if (en[4]) begin
+            constant <= {constant[4:0],constant[5]^constant[4]^1'b1};
+            state <= mxc;
+            key <= next_key;
+            tweak1 <= next_tweak1;
+            tweak2 <= next_tweak2;
+	    random_r <= {random_r[1214:0],random_r[27]^random_r[25]^random_r[9]^random_r[0]};  
+            if (constant == 6'h1a) begin
+               done_o <= 1;            
+            end
+	 end
       end
    end // always @ (posedge clk)
 
@@ -67,22 +74,22 @@ module skinny_2shares_top (/*AUTOARG*/
 			  {4'h0,constant[3:0],24'h0,6'h0,constant[5:4],24'h0,8'h02,56'h0};
 
    // SBox layer
-   skinny_sbox8_logic sbox00 (.so(sb[  7:  0]), .si(state[  7:  0]));
-   skinny_sbox8_logic sbox01 (.so(sb[ 15:  8]), .si(state[ 15:  8]));
-   skinny_sbox8_logic sbox02 (.so(sb[ 23: 16]), .si(state[ 23: 16]));
-   skinny_sbox8_logic sbox03 (.so(sb[ 31: 24]), .si(state[ 31: 24]));
-   skinny_sbox8_logic sbox04 (.so(sb[ 39: 32]), .si(state[ 39: 32]));
-   skinny_sbox8_logic sbox05 (.so(sb[ 47: 40]), .si(state[ 47: 40]));
-   skinny_sbox8_logic sbox06 (.so(sb[ 55: 48]), .si(state[ 55: 48]));
-   skinny_sbox8_logic sbox07 (.so(sb[ 63: 56]), .si(state[ 63: 56]));
-   skinny_sbox8_logic sbox08 (.so(sb[ 71: 64]), .si(state[ 71: 64]));
-   skinny_sbox8_logic sbox09 (.so(sb[ 79: 72]), .si(state[ 79: 72]));
-   skinny_sbox8_logic sbox10 (.so(sb[ 87: 80]), .si(state[ 87: 80]));
-   skinny_sbox8_logic sbox11 (.so(sb[ 95: 88]), .si(state[ 95: 88]));
-   skinny_sbox8_logic sbox12 (.so(sb[103: 96]), .si(state[103: 96]));
-   skinny_sbox8_logic sbox13 (.so(sb[111:104]), .si(state[111:104]));
-   skinny_sbox8_logic sbox14 (.so(sb[119:112]), .si(state[119:112]));
-   skinny_sbox8_logic sbox15 (.so(sb[127:120]), .si(state[127:120]));
+   skinny_sbox8_dom1_non_pipelined sbox00 (.bo1(sb[  7+128:  0+128]), .bo0(sb[	7:  0]), .so1(state[  7+128:  0+128]), .so0(state[  7:  0]), .r(r[  7:  0]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox01 (.bo1(sb[ 15+128:  8+128]), .bo0(sb[ 15:  8]), .so1(state[ 15+128:  8+128]), .so0(state[ 15:	8]), .r(r[ 15:  8]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox02 (.bo1(sb[ 23+128: 16+128]), .bo0(sb[ 23: 16]), .so1(state[ 23+128: 16+128]), .so0(state[ 23: 16]), .r(r[ 23: 16]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox03 (.bo1(sb[ 31+128: 24+128]), .bo0(sb[ 31: 24]), .so1(state[ 31+128: 24+128]), .so0(state[ 31: 24]), .r(r[ 31: 24]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox04 (.bo1(sb[ 39+128: 32+128]), .bo0(sb[ 39: 32]), .so1(state[ 39+128: 32+128]), .so0(state[ 39: 32]), .r(r[ 39: 32]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox05 (.bo1(sb[ 47+128: 40+128]), .bo0(sb[ 47: 40]), .so1(state[ 47+128: 40+128]), .so0(state[ 47: 40]), .r(r[ 47: 40]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox06 (.bo1(sb[ 55+128: 48+128]), .bo0(sb[ 55: 48]), .so1(state[ 55+128: 48+128]), .so0(state[ 55: 48]), .r(r[ 55: 48]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox07 (.bo1(sb[ 63+128: 56+128]), .bo0(sb[ 63: 56]), .so1(state[ 63+128: 56+128]), .so0(state[ 63: 56]), .r(r[ 63: 56]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox08 (.bo1(sb[ 71+128: 64+128]), .bo0(sb[ 71: 64]), .so1(state[ 71+128: 64+128]), .so0(state[ 71: 64]), .r(r[ 71: 64]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox09 (.bo1(sb[ 79+128: 72+128]), .bo0(sb[ 79: 72]), .so1(state[ 79+128: 72+128]), .so0(state[ 79: 72]), .r(r[ 79: 72]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox10 (.bo1(sb[ 87+128: 80+128]), .bo0(sb[ 87: 80]), .so1(state[ 87+128: 80+128]), .so0(state[ 87: 80]), .r(r[ 87: 80]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox11 (.bo1(sb[ 95+128: 88+128]), .bo0(sb[ 95: 88]), .so1(state[ 95+128: 88+128]), .so0(state[ 95: 88]), .r(r[ 95: 88]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox12 (.bo1(sb[103+128: 96+128]), .bo0(sb[103: 96]), .so1(state[103+128: 96+128]), .so0(state[103: 96]), .r(r[103: 96]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox13 (.bo1(sb[111+128:104+128]), .bo0(sb[111:104]), .so1(state[111+128:104+128]), .so0(state[111:104]), .r(r[111:104]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox14 (.bo1(sb[119+128:112+128]), .bo0(sb[119:112]), .so1(state[119+128:112+128]), .so0(state[119:112]), .r(r[119:112]), .en(en[3:0]), .clk(clk));
+   skinny_sbox8_dom1_non_pipelined sbox15 (.bo1(sb[127+128:120+128]), .bo0(sb[127:120]), .so1(state[127+128:120+128]), .so0(state[127:120]), .r(r[127:120]), .en(en[3:0]), .clk(clk));
 
    // Add Tweakey
    assign atk[127:0] = rkey[127:0] ^ sb[127:0];
